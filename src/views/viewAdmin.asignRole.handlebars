@@ -1,0 +1,56 @@
+<div class="contenedor">
+    <div class="contenedorImagenFondo">
+        <h1 class="text-register">Asignar Role</h1>
+        <div class="d-flex justify-content-center align-items-center" style="position: relative; height: 100%;">
+            <div class="card">
+                <div class="card-body">
+                    <form id="roleForm">
+                        <input type="email" name="email" class="form-control mb-2" placeholder="Introduzca el email">
+                        <input type="text" name="newRole" class="form-control mb-2"
+                            placeholder="Introduzca el role">
+                        <br>
+                        <p>[ user - user-premium - admin]</p>
+                        <button type="submit">Asignar</button>
+                        <br>
+                        <br>
+                    </form>
+                    <button onclick="window.location.href='/currentAdmin'">volver</button>
+                </div>
+            </div>s
+        </div>
+    </div>
+</div>
+
+
+<style>
+    h1 {
+        color: white;
+    }
+    body{
+        background-color: black;
+    }
+</style>
+
+
+<script>
+    document.getElementById('roleForm').addEventListener('submit', async function (event) {
+        event.preventDefault()
+
+        const formData = new FormData(this)
+        const data = Object.fromEntries(formData)
+
+        const response = await fetch('/api/users/update/role', {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+
+        if (response.ok) {
+            alert('Rol actualizado exitosamente');
+        } else {
+            alert('Error al actualizar el rol');
+        }
+    })
+</script>

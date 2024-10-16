@@ -1,0 +1,24 @@
+<div class="contenedor">
+    <div class="contenedorImagenFondo">
+        <img src="assets/img/libros_de_terror.jpg" alt="Imagen de fondo Home jeeps">
+        <h1 class="text-register">Login</h1>
+        <div class="d-flex justify-content-center align-items-center" style="position: relative; height: 100%;">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/api/sessions/login" method="POST">
+                        <input type="email" name="email" class="form-control mb-2" placeholder="Introduzca el email">
+                        <input type="password" name="password" class="form-control mb-2" placeholder="Introduzca el password">
+                        <br>
+                        <button type="submit">Entrar</button>
+                        <br>
+                        <br>
+                        <a href="/api/sessions/github" class="btn btn-outline-dark w-75">Entrar con github</a>
+                        <br>
+                        <br>
+                    </form>
+                    <button onclick="window.location.href='/'">Home</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

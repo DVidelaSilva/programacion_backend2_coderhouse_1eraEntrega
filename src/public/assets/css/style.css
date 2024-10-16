@@ -1,0 +1,192 @@
+
+body {
+    background-color: black;
+    margin: 0;
+    /* Elimina el margen por defecto del body */
+    overflow: hidden;
+    /* Evita que aparezcan barras de desplazamiento */
+}
+
+.contenedor {
+    display: flex;
+    align-items: center;
+    /* Centra verticalmente los elementos */
+    height: 100vh;
+    /* Altura completa de la ventana */
+    position: relative;
+    /* Permite el uso de z-index */
+}
+
+.contenedorImagenFondo {
+    position: relative;
+    /* Permite el posicionamiento absoluto de la imagen */
+    flex: 1;
+    /* Toma el resto del espacio disponible */
+}
+
+.contenedorImagenFondo img {
+    width: 100%;
+    /* La imagen ocupa el 100% del ancho del contenedor */
+    height: 100%;
+    /* La imagen ocupa el 100% de la altura del contenedor */
+    object-fit: cover;
+    /* Mantiene la relación de aspecto y cubre el contenedor */
+}
+
+.text-register {
+    top: 250px;
+}
+
+.card {
+    background-color: white;
+    bottom: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    /* Ancho de la tarjeta */
+    z-index: 2;
+    /* Asegura que esté encima de la imagen */
+}
+
+.card-body {
+    text-align: center;
+    /* Centra el texto */
+}
+
+h1 {
+
+    font-family: "Creepster", system-ui;
+    font-weight: 400;
+    font-style: normal;
+        
+    position: absolute;
+    /* Permite posicionar el texto sobre la imagen */
+    top: 80px;
+    /* Espacio desde la parte superior */
+    left: 50%;
+    /* Centra horizontalmente el título */
+    transform: translateX(-50%);
+    /* Ajusta el centro */
+    font-size: 90px;
+    /* Tamaño de la fuente */
+    color: white;
+    /* Color del texto */
+    z-index: 2;
+    /* Asegura que el texto esté encima de la imagen */
+    text-align: center;
+    /* Centra el texto */
+    text-shadow: 2px 2px 0 black,
+        /* Sombra a la derecha y abajo */
+        -2px -2px 0 black,
+        /* Sombra a la izquierda y arriba */
+        2px -2px 0 black,
+        /* Sombra a la derecha y arriba */
+        -2px 2px 0 black;
+    /* Sombra a la izquierda y abajo */
+}
+
+.contenedorBotones {
+    display: flex;
+    justify-content: center;
+    /* Centra los botones horizontalmente */
+    position: absolute;
+    /* Permite posicionar los botones sobre la imagen */
+    bottom: 20px;
+    /* Espacio desde el fondo */
+    left: 50%;
+    /* Centra horizontalmente el contenedor */
+    transform: translateX(-50%);
+    /* Ajusta el centro */
+    z-index: 2;
+    /* Asegura que los botones estén encima de la imagen */
+}
+
+.contenedorBotones button {
+    width: 150px;
+    /* Ajusta el ancho deseado */
+    margin: 0 10px;
+    /* Espacio entre los botones */
+    padding: 10px 15px;
+    /* Espaciado interno de los botones */
+    background-color: #ff8800;
+    /* Color de fondo del botón */
+    color: white;
+    /* Color del texto */
+    font-size: 25px;
+    /* Tamaño de la fuente */
+    border: none;
+    /* Sin borde */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    cursor: pointer;
+    /* Cambia el cursor al pasar sobre el botón */
+}
+
+.contenedorBotones button:hover {
+    background-color: black;
+    /* Color al pasar el mouse */
+}
+
+button {
+    width: 150px;
+    /* Ajusta el ancho deseado */
+    margin: 0 10px;
+    /* Espacio entre los botones */
+    padding: 10px 15px;
+    /* Espaciado interno de los botones */
+    background-color: #ff8800;
+    /* Color de fondo del botón */
+    color: white;
+    /* Color del texto */
+    font-size: 25px;
+    /* Tamaño de la fuente */
+    border: none;
+    /* Sin borde */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    cursor: pointer;
+    /* Cambia el cursor al pasar sobre el botón */
+}
+
+button:hover {
+    background-color: black;
+    /* Color al pasar el mouse */
+}
+
+.titulo {
+    margin-bottom: 20px;
+    /* Ajusta el valor según sea necesario */
+}
+
+.contenedorBotonesDerecha {
+    position: absolute;
+    /* Para posicionar los botones en la parte superior derecha */
+    top: 10px;
+    /* Ajusta según sea necesario */
+    right: 10px;
+    /* Ajusta según sea necesario */
+    display: flex;
+    gap: 10px;
+    /* Espacio entre los botones */
+}
+.botonPequeño {
+    padding: 15px 20px;
+    /* Tamaño del padding para hacer el botón más pequeño */
+    font-size: 20px;
+    /* Tamaño de la fuente */
+    border: 3px solid black;
+    /* Sin borde */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    cursor: pointer;
+    /* Cambia el cursor al pasar por encima */
+    background-color: #ff8800;
+    /* Color de fondo */
+    color: white;
+    /* Color del texto */
+}
+.botonPequeño:hover {
+    background-color: black;
+    /* Color de fondo al pasar el mouse */
+}
